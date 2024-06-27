@@ -25,13 +25,13 @@
   </div>
 </template>
 <script>
-import moment from "moment";
+import moment from 'moment';
 export default {
   data() {
     return {
       form: {
-        date: "",
-        time: "",
+        date: '',
+        time: '',
       },
       pickerOptions: {
         disabledHours: () => [],
@@ -42,9 +42,9 @@ export default {
   methods: {
     handleDateChange(date) {
       this.form.time = null;
-      const selectedDate = moment(date).format("YYYY-MM-DD");
+      const selectedDate = moment(date).format('YYYY-MM-DD');
       console.log(selectedDate);
-      const today = moment().format("YYYY-MM-DD");
+      const today = moment().format('YYYY-MM-DD');
       console.log(today);
 
       if (selectedDate == today) {

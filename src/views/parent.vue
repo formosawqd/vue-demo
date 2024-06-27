@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      iframeSrc: "",
+      iframeSrc: '',
       num: 0,
     };
   },
@@ -22,19 +22,19 @@ export default {
     //     console.log(e.data);
     //   }
     // };
-    window.addEventListener("message", (e) => {
+    window.addEventListener('message', (e) => {
       console.log(e);
     });
   },
   methods: {
     add() {
       this.num++;
-      window.addEventListener("message", (e) => {
+      window.addEventListener('message', (e) => {
         console.log(e);
       });
     },
     go() {
-      this.iframeSrc = "http://localhost:8080/#/child?name=formosa";
+      this.iframeSrc = 'http://localhost:8080/#/child?name=formosa';
       setTimeout(() => {}, 1000);
     },
   },

@@ -12,9 +12,9 @@ export default {
   methods: {
     go() {
       this.$router.push({
-        path: "about?",
+        path: 'about?',
         query: {
-          name: "formosa",
+          name: 'formosa',
         },
       });
     },
