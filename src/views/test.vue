@@ -24,13 +24,18 @@ export default {
         { value: '6', label: 'Option 4' },
         { value: '7', label: 'Option 4' },
         { value: '8', label: 'Option 4' },
-        { value: '9', label: 'Option 4' },
+                 { value: '9', label: 'Option 4' },
         { value: '11', label: 'Option 4' },
-        { value: '35', label: 'Option 4' },
-        { value: '235', label: 'Option 4' },
+        { value: '35', label: 'Option 4 ' },
+               { value: '235', label: 'Option 4' },
         { value: '2351', label: 'Option 4' },
       ],
     };
+  },
+  methods: {
+    getList() {
+                console.log(1);
+    },
   },
 };
 </script>
