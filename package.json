@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,vue,html,css,scss,json,md}\"",
-     "prepare": "husky install"
+    "prepare": "husky install"
   },
   "dependencies": {
     "ant-design-vue": "^1.7.8",
@@ -19,10 +19,12 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^19.2.2",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-router": "~4.5.15",
     "@vue/cli-plugin-vuex": "~4.5.15",
     "@vue/cli-service": "~4.5.15",
+    "commitlint": "^19.3.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",

@@ -32,6 +32,7 @@ export default {
     };
   },
   mounted() {},
+  computed() {},
   methods: {
     getList() {
       console.log(1);
