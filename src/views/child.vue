@@ -13,6 +13,7 @@ export default {
       window.parent.postMessage('close', '*');
     }, 5000);
   },
+  methods: {},
 };
 </script>
 
