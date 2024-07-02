@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { debounce, throttle } from "../utils";
+import { debounce, throttle } from '../utils';
 export default {
   data() {
     return {};
@@ -17,7 +17,7 @@ export default {
   methods: {
     initData() {
       let timer = setTimeout(() => {
-        console.log("1秒之后的打印");
+        console.log('1秒之后的打印');
       }, 1000);
     },
     getVal() {

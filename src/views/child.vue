@@ -10,9 +10,10 @@ export default {
   mounted() {
     console.log(this.$route.query);
     setTimeout(() => {
-      window.parent.postMessage("close", "*");
+      window.parent.postMessage('close', '*');
     }, 5000);
   },
+  methods: {},
 };
 </script>
 
