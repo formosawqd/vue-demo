@@ -1,46 +1,42 @@
 <template>
-  <el-select collapse-tags v-model="value" multiple placeholder="请选择">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"
-    >
-    </el-option>
-  </el-select>
+  <div>
+    <h1>User List</h1>
+    <ul>
+      <li v-for="user in users" :key="user.name">
+        {{ user.name }}, {{ user.age }}, {{ user.address }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
+import { getUsers } from '../api/index';
+
 export default {
   data() {
     return {
-      value: [],
-      options: [
-        { value: '1', label: 'Option 1' },
-        { value: '2', label: 'Option 2' },
-        { value: '3', label: 'Option 3' },
-        { value: '4', label: 'Option 4' },
-        { value: '5', label: 'Option 4' },
-        { value: '6', label: 'Option 4' },
-        { value: '7', label: 'Option 4' },
-        { value: '9', label: 'Option 4' },
-        { value: '11', label: 'Option 4' },
-        { value: '35', label: 'Option 4 ' },
-        { value: '235', label: 'Option 4' },
-        { value: '2351', label: 'Option 4' },
-      ],
+      users: [],
     };
   },
-  mounted() {},
-  computed() {},
+  created() {
+    console.log('created');
+    this.fetchUsers();
+  },
   methods: {
-    getList() {
-      console.log(1);
+    async fetchUsers() {
+      try {
+        getUsers().then((res) => {
+          console.log(res);
+          this.users = res.data;
+        });
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
     },
   },
 };
 </script>
 
 <style scoped>
-/* 自定义 select 多选后的 tag 样式 */
+/* 在这里添加你的样式 */
 </style>

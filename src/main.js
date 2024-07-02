@@ -10,7 +10,7 @@ import { test } from './utils';
 import 'ant-design-vue/dist/antd.css';
 Vue.use(Antd);
 Vue.prototype.$message = Message;
-test();
+// test();
 
 Vue.config.productionTip = false;
 
