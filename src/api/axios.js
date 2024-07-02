@@ -22,6 +22,7 @@ api.interceptors.request.use(
 // 响应拦截器
 api.interceptors.response.use(
   (response) => {
+    // 这里还要判断2xx 的响应结果是否正常
     return response;
   },
   (error) => {
