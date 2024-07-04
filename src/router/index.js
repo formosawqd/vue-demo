@@ -46,6 +46,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "debounce" */ '../views/debounce.vue'),
   },
+  {
+    path: '/Login',
+    name: 'Login',
+    component: () =>
+      import(/* webpackChunkName: "Login" */ '../views/Login.vue'),
+  },
+  {
+    path: '/protected',
+    name: 'protected',
+    component: () =>
+      import(/* webpackChunkName: "protected" */ '../components/Protected.vue'),
+  },
 ];
 
 const router = new VueRouter({

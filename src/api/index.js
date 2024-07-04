@@ -14,3 +14,10 @@ export const uploadFile = (file) => {
     },
   });
 };
+
+export const login = (params) => {
+  return api.post('/login', params);
+};
+export const isProtected = (params) => {
+  return api.get('/protected');
+};
