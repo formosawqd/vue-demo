@@ -58,6 +58,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "protected" */ '../components/Protected.vue'),
   },
+  {
+    path: '/table',
+    name: 'table',
+    component: () =>
+      import(/* webpackChunkName: "form  " */ '../views/Table'),
+  },
 ];
 
 const router = new VueRouter({

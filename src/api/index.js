@@ -21,3 +21,7 @@ export const login = (params) => {
 export const isProtected = (params) => {
   return api.get('/protected');
 };
+
+export const getList = (params) => {
+  return api.post('/getList', params);
+};
