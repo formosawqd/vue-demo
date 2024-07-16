@@ -8,6 +8,10 @@ import 'element-ui/lib/theme-chalk/index.css';
 import Antd from 'ant-design-vue';
 import { test } from './utils';
 import 'ant-design-vue/dist/antd.css';
+// 挂载全局使用的方法
+import VueDraggableResizable from 'vue-draggable-resizable'
+Vue.component('vue-draggable-resizable', VueDraggableResizable)
+
 Vue.use(Antd);
 Vue.prototype.$message = Message;
 // test();
