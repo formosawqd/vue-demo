@@ -46,6 +46,24 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "debounce" */ '../views/debounce.vue'),
   },
+  {
+    path: '/tableSel',
+    name: 'tableSel',
+    component: () =>
+      import(/* webpackChunkName: "tableSel" */ '..//views/TableSelect/index.vue'),
+  },
+  {
+    path: '/singleSelect',
+    name: 'singleSelect',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '..//views/TableSelect/singleSelect.vue'),
+  },
+  {
+    path: '/singleSelect1',
+    name: 'singleSelect1',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '..//views/TableSelect/singleSelect1.vue'),
+  },
 ];
 
 const router = new VueRouter({
