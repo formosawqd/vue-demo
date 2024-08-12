@@ -63,6 +63,22 @@ const routes = [
     name: 'table',
     component: () =>
       import(/* webpackChunkName: "form  " */ '../views/Table'),
+    path: '/tableSel',
+    name: 'tableSel',
+    component: () =>
+      import(/* webpackChunkName: "tableSel" */ '..//views/TableSelect/index.vue'),
+  },
+  {
+    path: '/singleSelect',
+    name: 'singleSelect',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '..//views/TableSelect/singleSelect.vue'),
+  },
+  {
+    path: '/singleSelect1',
+    name: 'singleSelect1',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '..//views/TableSelect/singleSelect1.vue'),
   },
 ];
 
