@@ -66,19 +66,25 @@ const routes = [
     path: '/tableSel',
     name: 'tableSel',
     component: () =>
-      import(/* webpackChunkName: "tableSel" */ '..//views/TableSelect/index.vue'),
+      import(/* webpackChunkName: "tableSel" */ '../views/TableSelect/index.vue'),
   },
   {
     path: '/singleSelect',
     name: 'singleSelect',
     component: () =>
-      import(/* webpackChunkName: "singleSelect" */ '..//views/TableSelect/singleSelect.vue'),
+      import(/* webpackChunkName: "singleSelect" */ '../views/TableSelect/singleSelect.vue'),
   },
   {
     path: '/singleSelect1',
     name: 'singleSelect1',
     component: () =>
-      import(/* webpackChunkName: "singleSelect" */ '..//views/TableSelect/singleSelect1.vue'),
+      import(/* webpackChunkName: "singleSelect" */ '../views/TableSelect/singleSelect1.vue'),
+  },
+  {
+    path: '/merge',
+    name: 'merge',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '../views/tableMerge/index.vue'),
   },
 ];
 
