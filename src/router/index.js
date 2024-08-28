@@ -115,6 +115,12 @@ const routes = [
         /* webpackChunkName: "singleSelect" */ '../views/editTable/editTable.vue'
       ),
   },
+  {
+    path: '/pubu',
+    name: 'pubu',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '../views/pubu/index.vue'),
+  },
 ];
 
 const router = new VueRouter({

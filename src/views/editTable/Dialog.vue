@@ -14,7 +14,7 @@
         rowKey="logInfPK"
       >
         <template
-          v-for="col in ['id', 'address']"
+          v-for="col in ['logInfPK', 'address']"
           :slot="col"
           slot-scope="text, record, index"
         >
@@ -86,7 +86,7 @@ export default {
           scopedSlots: { customRender: 'address' },
         },
         {
-          title: 'operation',
+          title: '操作',
           dataIndex: 'operation',
           scopedSlots: { customRender: 'operation' },
         },
@@ -136,6 +136,7 @@ export default {
         this.data = newData;
       }
       this.editingKey = '';
+      console.log(this.data);
     },
     cancel(key) {
       const newData = [...this.data];
