@@ -25,3 +25,7 @@ export const isProtected = (params) => {
 export const getList = (params) => {
   return api.post('/getList', params);
 };
+
+export const getTree = (params) => {
+  return api.post('/tree', params);
+};
