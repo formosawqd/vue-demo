@@ -1,19 +1,33 @@
 <template>
   <div style="max-width: 600px">
-    <a-table :columns="columns" :components="components" :data-source="tableList" :rowKey="(record) => record.key"
-      bordered :pagination="ispagination" size="middle" :scroll="{ x: scrollX }">
-      <template v-for="column in columns" :slot="column.scopedSlots ? column.scopedSlots.customRender : ''"
-        slot-scope="text, record">
-        <slot :name="column.scopedSlots ? column.scopedSlots.customRender : ''" v-bind="record"></slot>
+    <a-table
+      :columns="columns"
+      :components="components"
+      :data-source="tableList"
+      :rowKey="(record) => record.key"
+      bordered
+      :pagination="ispagination"
+      size="middle"
+      :scroll="{ x: scrollX }"
+    >
+      <template
+        v-for="column in columns"
+        :slot="column.scopedSlots ? column.scopedSlots.customRender : ''"
+        slot-scope="text, record"
+      >
+        <slot
+          :name="column.scopedSlots ? column.scopedSlots.customRender : ''"
+          v-bind="record"
+        ></slot>
       </template>
     </a-table>
   </div>
 </template>
 <script>
 import Vue from 'vue';
-import VueDraggableResizable from 'vue-draggable-resizable';
-
-Vue.component('vue-draggable-resizable', VueDraggableResizable);
+// import VueDraggableResizable from 'vue-draggable-resizable';
+//
+// Vue.component('vue-draggable-resizable', VueDraggableResizable);
 
 export default {
   name: 'cTable',

@@ -97,14 +97,22 @@ const routes = [
     path: '/tree',
     name: 'tree',
     component: () =>
-      import(/* webpackChunkName: "singleSelect" */ '..//views/tree/index.vue'),
+      import(/* webpackChunkName: "singleSelect" */ '../views/tree/index.vue'),
   },
   {
     path: '/props',
     name: 'props',
     component: () =>
       import(
-        /* webpackChunkName: "singleSelect" */ '..//views/props/parent.vue'
+        /* webpackChunkName: "singleSelect" */ '../views/props/parent.vue'
+      ),
+  },
+  {
+    path: '/edittable',
+    name: 'edittable',
+    component: () =>
+      import(
+        /* webpackChunkName: "singleSelect" */ '../views/editTable/editTable.vue'
       ),
   },
 ];
