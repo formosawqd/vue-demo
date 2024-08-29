@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { name, say } from './index';
+import { name, say, age } from './index';
 export default {
   mounted() {
     this.init();
@@ -11,6 +11,7 @@ export default {
   methods: {
     init() {
       console.log(name);
+      console.log(age);
       say();
     },
   },
