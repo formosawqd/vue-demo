@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
@@ -8,49 +7,41 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
-  },
-  {
-    path: '/about',
-    name: 'About',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
+      import(/* webpackChunkName: "about" */ '../views/home/Home.vue'),
   },
-  {
-    path: '/test',
-    name: 'test',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/test.vue'),
-  },
+
   {
     path: '/upload',
     name: 'upload',
     component: () =>
-      import(/* webpackChunkName: "upload" */ '../views/upload.vue'),
+      import(/* webpackChunkName: "upload" */ '../views/upload/upload.vue'),
   },
   {
     path: '/parent',
     name: 'parent',
     component: () =>
-      import(/* webpackChunkName: "parent" */ '../views/parent.vue'),
+      import(/* webpackChunkName: "parent" */ '../views/parent/parent.vue'),
   },
   {
     path: '/child',
     name: 'child',
     component: () =>
-      import(/* webpackChunkName: "child" */ '../views/child.vue'),
+      import(/* webpackChunkName: "child" */ '../views/parent/child.vue'),
   },
   {
     path: '/debounce',
     name: 'debounce',
     component: () =>
-      import(/* webpackChunkName: "debounce" */ '../views/debounce.vue'),
+      import(
+        /* webpackChunkName: "debounce" */ '../views/debounce/debounce.vue'
+      ),
   },
   {
     path: '/Login',
     name: 'Login',
     component: () =>
-      import(/* webpackChunkName: "Login" */ '../views/Login.vue'),
+      import(/* webpackChunkName: "Login" */ '../views/login/Login.vue'),
   },
   {
     path: '/protected',

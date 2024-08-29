@@ -16,7 +16,7 @@
 
 <script>
 import axios from 'axios';
-import { uploadFile } from '../api/index';
+import { uploadFile } from '@/api/index.js';
 
 export default {
   name: 'FileUpload',

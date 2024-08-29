@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { getUsers } from '../api/index';
+import { getUsers } from '../../api/index';
 
 export default {
   data() {

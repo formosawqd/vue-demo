@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { debounce, throttle } from '../utils';
+import { debounce, throttle } from '../../utils';
 export default {
   data() {
     return {};

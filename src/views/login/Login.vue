@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import axios from '../api/axios';
-import { login } from '../api/index';
+import axios from '../../api/axios';
+import { login } from '../../api/index';
 
 export default {
   data() {
