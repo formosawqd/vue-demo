@@ -112,6 +112,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "singleSelect" */ '../views/pubu/index.vue'),
   },
+  {
+    path: '/cjs',
+    name: 'cjs',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '../views/cjs/index.vue'),
+  },
+  {
+    path: '/esm',
+    name: 'esm',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '../views/esm/index.vue'),
+  },
 ];
 
 const router = new VueRouter({
