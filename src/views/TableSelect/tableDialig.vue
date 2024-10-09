@@ -12,11 +12,11 @@
         :row-key="getRowKey"
         ref="multipleTable"
         @select="handleSelect"
+        @select-all="handleSelectAll"
       >
         <el-table-column type="selection" width="55" :reserve-selection="true">
         </el-table-column>
-        <el-table-column prop="date" label="日期" width="180">
-        </el-table-column>
+        <el-table-column prop="id" label="编号" width="180"> </el-table-column>
         <el-table-column prop="name" label="姓名" width="180">
         </el-table-column>
         <el-table-column prop="address" label="地址"> </el-table-column>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { getList } from '../../api/index';
 export default {
   props: {
     visiableDialog: {
@@ -55,54 +56,11 @@ export default {
   data() {
     return {
       tableData: [],
-      dataList1: [
-        {
-          id: 1,
-          date: '1',
-        },
-        {
-          id: 2,
-          date: '2',
-        },
-        {
-          id: 3,
-          date: '3',
-        },
-        {
-          id: 4,
-          date: '4',
-        },
-        {
-          id: 5,
-          date: '5',
-        },
-      ],
-      dataList2: [
-        {
-          id: 6,
-          date: '6',
-        },
-        {
-          id: 7,
-          date: '7',
-        },
-        {
-          id: 8,
-          date: '8',
-        },
-        {
-          id: 9,
-          date: '9',
-        },
-        {
-          id: 10,
-          date: '10',
-        },
-      ],
+
       pageInfo: {
         currentPage: 1,
-        pageSize: 4,
-        total: 8,
+        pageSize: 5,
+        total: 25,
       },
       echoList: [],
     };
@@ -112,16 +70,18 @@ export default {
     this.getList();
   },
   methods: {
+    handleSelectAll(data) {
+      console.log(data);
+    },
     handleSelect(sels, row) {
       console.log(sels);
       console.log(row);
-
       let selected = sels.length && sels.indexOf(row) !== -1;
       if (!selected) {
         this.echoList = this.echoList.filter((el) => el.id != row.id);
       } else {
-        if (this.echoList.length >= 3) {
-          this.$message.warning('最多选择3个');
+        if (this.echoList.length >= 10) {
+          this.$message.warning('最多选择10个');
           return;
         }
         this.echoList.push(row);
@@ -141,22 +101,23 @@ export default {
         }
       });
     },
-    getList(val = 1) {
-      Promise.resolve().then(() => {
-        if (val == 1) {
-          this.tableData = this.dataList1;
-        } else {
-          this.tableData = this.dataList2;
-        }
-        this.setRowSelected();
-      });
+    async getList() {
+      let param = {
+        currentPage: this.pageInfo.currentPage,
+        pageSize: this.pageInfo.pageSize,
+      };
+      let res = await getList(param);
+      console.log(res.data.data);
+      this.tableData = res.data.data;
+      this.setRowSelected();
     },
     getRowKey(row) {
       return row.id;
     },
     handleSizeChange() {},
     handleCurrentChange(val) {
-      this.getList(val);
+      this.pageInfo.currentPage = val;
+      this.getList();
     },
   },
 };
