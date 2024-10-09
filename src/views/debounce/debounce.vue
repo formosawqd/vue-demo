@@ -10,6 +10,7 @@ export default {
   },
   created() {
     this.debounceGetVal = debounce(this.getVal, 1000);
+    console.log(this.debounceGetVal);
   },
   mounted() {
     this.initData();

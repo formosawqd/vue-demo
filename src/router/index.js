@@ -138,6 +138,18 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "singleSelect" */ '../views/slots/index.vue'),
   },
+  {
+    path: '/apply',
+    name: 'apply',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '../views/apply/index.vue'),
+  },
+  {
+    path: '/call',
+    name: 'call',
+    component: () =>
+      import(/* webpackChunkName: "singleSelect" */ '../views/call/index.vue'),
+  },
 ];
 
 const router = new VueRouter({
